@@ -9,16 +9,39 @@
 # - Entre -75 dBm i menys de -67 dBm: feble
 # - Inferior a -75 dBm: molt feble
 
+# nivell_wifi = float(input("Introdueix el nivell de senyal rebut en dBm: "))
+# if nivell_wifi >= -50:
+#     print("La cobertura és excel·lent")
+# elif -50<nivell_wifi<=-67:
+#     print("La cobertura és bona")
+# elif -67<nivell_wifi<=-75:
+#     print("La cobertura és feble")
+# elif nivell_wifi < -75:
+#     print("La cobertura és molt feble")
 
 # Exercici 2: Nivell de recepció d'una connexió de fibra òptica
 # Demana la potència òptica rebuda en dBm. Per a aquest exercici, considera
 # acceptable un nivell entre -27 dBm i -8 dBm, ambdós inclosos.
 # Indica si el nivell és massa baix, acceptable o massa alt.
 
+# potencia_optica = float(input("Introdueix la potència òptica en dBm: "))
+# if -8>=potencia_optica>=-27:
+#     print("El nivell de potència òptica és acceptabe")
+# elif potencia_optica>-8:
+#     print("El nivell de potènia optica és massa alt")
+# elif potencia_optica<-27:
+#     print("EL nivell de potènci òptica és massa baix")
+
 # Exercici 3: Consum mensual de dades mòbils
 # Demana el consum de dades en GB d'una línia mòbil. El pla inclou 20 GB.
 # Indica si el consum és dins del límit o si l'ha superat; en aquest últim cas,
 # calcula quants GB addicionals s'han consumit.
+consum_dades = float(input("Introdueix el consum de dades en GB de la teva línia mòbil: "))
+if consum_dades > 20:
+    dades_extras = consum_dades - 20
+    print(f"Has superat el límit de dades, s'han consumit {dades_extras:.2f}GB extras")
+else:
+    print("El teu consum està dins del límit")
 
 # Exercici 4: Diagnòstic d'una connexió de fibra
 # Demana si l'indicador LOS del terminal òptic està encès i si l'indicador
