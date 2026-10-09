@@ -36,6 +36,7 @@
 # Demana el consum de dades en GB d'una línia mòbil. El pla inclou 20 GB.
 # Indica si el consum és dins del límit o si l'ha superat; en aquest últim cas,
 # calcula quants GB addicionals s'han consumit.
+
 consum_dades = float(input("Introdueix el consum de dades en GB de la teva línia mòbil: "))
 if consum_dades > 20:
     dades_extras = consum_dades - 20
@@ -48,6 +49,8 @@ else:
 # d'Internet del router està encès. Segons aquestes dues dades, indica si cal
 # revisar el cable de fibra, comprovar el servei del proveïdor o si la connexió
 # sembla funcionar correctament.
+
+
 
 # Exercici 5: Bateria d'un sistema d'alimentació ininterrompuda (SAI)
 # Demana el percentatge de bateria disponible al SAI que alimenta un armari
