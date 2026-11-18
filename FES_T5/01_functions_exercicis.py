@@ -44,6 +44,7 @@ taula_multiplicar(7)
 # Exercici 6: Informació amb **kwargs
 # Crea una funció mostrar_perfil(**kwargs) que imprimeixi cada parella clau: valor.
 # Crida-la amb les dades d'un estudiant (nom, edat, grau).
+def mostrar_perfil(**kwargs):#**kwargs significa keyword arguments --> acepta argumentos que vienen con nombres
 
 # Exercici 7: Reconvertir exercicis anteriors
 # Torna a l'exercici del factorial (while) i del màxim d'una llista (for)
@@ -59,4 +60,4 @@ taula_multiplicar(7)
 
 # Exercici 10: Palíndrom
 # Crea una funció es_palindrom(text) que retorni True si una paraula es llegeix igual d'esquerra a dreta
-# que de dreta a esquerra (ignorant majúscules i minúscules), i False en cas contrari.
+# que de dreta a esquerra (ignorant majúscules i minúscules), i False en cas contrari
