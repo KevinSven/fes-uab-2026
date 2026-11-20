@@ -45,19 +45,69 @@ taula_multiplicar(7)
 # Crea una funció mostrar_perfil(**kwargs) que imprimeixi cada parella clau: valor.
 # Crida-la amb les dades d'un estudiant (nom, edat, grau).
 def mostrar_perfil(**kwargs):#**kwargs significa keyword arguments --> acepta argumentos que vienen con nombres
+    for clau, valor in kwargs.items():
+        print(f"{clau}: {valor}")
 
+mostrar_perfil(edat = 19, nom = 'Kevin', grau="Enginyeria de Telecomunicació")
 # Exercici 7: Reconvertir exercicis anteriors
 # Torna a l'exercici del factorial (while) i del màxim d'una llista (for)
 # i converteix-los en funcions que retornin el resultat.
+def factorial(n):
+    if n < 0:
+        raise ValueError("El factorial no està definit per a nombres negatius.")
+    resultat = 1
+    comptador = 1
+    while comptador <= n:
+        resultat *= comptador
+        comptador += 1
+    
+    return resultat
 
+print(factorial(5)) 
+
+def maxim_llista(numeros):
+    if not numeros:
+        return None  # O pots llançar un ValueError si la llista està buida
+    valor_max = numeros[0]
+    for num in numeros:
+        if num > valor_max:
+            valor_max = num
+    return valor_max
+
+print(maxim_llista([12, 82, 74, 64, 73, 8]))  # 82
 # Exercici 8: Comptar vocals
 # Crea una funció comptar_vocals(text) que rebi una cadena de text i retorni quantes vocals
 # (a, e, i, o, u) conté. Ha de funcionar tant amb majúscules com amb minúscules.
+def comptar_vocals(text):
+    lletres = 'aeiou'
+    comptador = 0
+    for caracter in text.lower():
+        if caracter in lletres:
+            comptador+= 1
+    print(comptador)
+comptar_vocals('elefante')
 
 # Exercici 9: Retorn múltiple (mínim i màxim)
 # Crea una funció minim_i_maxim(numeros) que rebi una llista de números i retorni tant el valor
 # mínim com el valor màxim alhora. Desempaqueta el resultat en dues variables.
-
+def minim_i_maxim(numeros):
+    valor_max = numeros[0]
+    valor_min = numeros[0]
+    for num in numeros:
+        if num > valor_max:
+            valor_max = num
+        elif num < valor_min:
+            valor_min = num
+    print(valor_max)
+    print(valor_min)
+minim_i_maxim([12,2,23,4,1,-4])
 # Exercici 10: Palíndrom
 # Crea una funció es_palindrom(text) que retorni True si una paraula es llegeix igual d'esquerra a dreta
 # que de dreta a esquerra (ignorant majúscules i minúscules), i False en cas contrari
+def es_palindrom(text):
+    invertida = text[::-1]
+    if text == invertida:
+        return True
+    else:
+        return False
+print(es_palindrom('ana'))
