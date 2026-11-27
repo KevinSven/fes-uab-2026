@@ -41,7 +41,11 @@ print(temperatures_kelv)
 # El mòdul sensors ja defineix el tractament de la llista buida.
 dades = {"T1": [20.0, 22.0], "T2": [18.0], "T3": []}
 # TODO: reutilitza la funció importada per a cada sensor.
-
+mitjanes_dicc = {}
+from sensors import mitjana #Importa únicament mitjana del mòdul de sensors
+for sensor,lectures in dades.items():
+    mitjanes_dicc[sensor] = mitjana(lectures)
+print(mitjanes_dicc)
 
 
 # Exercici 4 - Repte opcional. Un programa reutilitzable
