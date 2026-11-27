@@ -48,6 +48,7 @@ for sensor,lectures in dades.items():
 print(mitjanes_dicc)
 
 
+
 # Exercici 4 - Repte opcional. Un programa reutilitzable
 # Defineix informe_sensor(nom, lectures) que retorni un diccionari amb
 # les claus 'nom', 'nombre' i 'mitjana'. Reutilitza sensors.mitjana.
@@ -59,3 +60,10 @@ print(mitjanes_dicc)
 # Protegeix TOTES les demostracions del fitxer amb __name__ == '__main__'.
 # En importar el fitxer no s'ha de mostrar cap sortida.
 # TODO: reorganitza les demostracions dels exercicis 1–3 dins de main().
+def informe_sensors(nom,lectures):
+    mitjana_sens = mitjana(lectures)
+    informe = {'nom': nom, 'nombre': len(lectures), 'mitjana': mitjana_sens}
+    print(informe)
+
+informe_sensors('T0', [])
+
