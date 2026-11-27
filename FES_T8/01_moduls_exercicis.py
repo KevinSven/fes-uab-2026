@@ -12,8 +12,8 @@
 x = 3.0
 y = 4.0
 # TODO: escriu les importacions i els càlculs.
-import math
-modul = abs(sqrt(x*x + y*y))
+import math as matematiques
+modul = abs(matematiques.sqrt(x*x + y*y))
 # Exercici 2 - Bàsic. Conversions reutilitzables
 # Importa conversions amb l'àlies conv i utilitza les seves funcions.
 # Converteix cada temperatura a kelvins i cada tensió a volts.
