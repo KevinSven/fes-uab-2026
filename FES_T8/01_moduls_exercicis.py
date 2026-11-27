@@ -13,7 +13,8 @@ x = 3.0
 y = 4.0
 # TODO: escriu les importacions i els càlculs.
 import math as matematiques
-modul = abs(matematiques.sqrt(x*x + y*y))
+modul = matematiques.sqrt(x*x + y*y)
+print (modul)
 # Exercici 2 - Bàsic. Conversions reutilitzables
 # Importa conversions amb l'àlies conv i utilitza les seves funcions.
 # Converteix cada temperatura a kelvins i cada tensió a volts.
@@ -23,6 +24,15 @@ modul = abs(matematiques.sqrt(x*x + y*y))
 temperatures = [-10.0, 0.0, 25.0]
 tensions_mv = [0, 3300, 5000]
 # TODO: obtén i mostra dues llistes amb les conversions.
+import conversions as conv
+tensions_v = []
+for num in tensions_mv:
+    tensions_v.append(conv.milivolts_a_volts(num))
+print(tensions_v)
+temperatures_kelv = []
+for num in temperatures:
+    temperatures_kelv.append(conv.celsius_a_kelvin(num))
+print(temperatures_kelv)
 
 # Exercici 3 - Intermedi. Resum d'una xarxa de sensors
 # Importa únicament mitjana del mòdul sensors.
@@ -31,6 +41,8 @@ tensions_mv = [0, 3300, 5000]
 # El mòdul sensors ja defineix el tractament de la llista buida.
 dades = {"T1": [20.0, 22.0], "T2": [18.0], "T3": []}
 # TODO: reutilitza la funció importada per a cada sensor.
+
+
 
 # Exercici 4 - Repte opcional. Un programa reutilitzable
 # Defineix informe_sensor(nom, lectures) que retorni un diccionari amb
